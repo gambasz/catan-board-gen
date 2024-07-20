@@ -25,6 +25,8 @@ function getTileTypeCSS(tileType: TileType) {
         case TileType.WoodTile:
             tileTypeCSS = 'tile color-wood'
             break
+        default:
+            console.log(`Got a weird tileType: ${tileType}`)
     }
 
     return tileTypeCSS

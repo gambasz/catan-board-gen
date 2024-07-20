@@ -1,6 +1,6 @@
 import DesertTile from "./DesertTile"
 import { PortType, PortTile } from "./PortTile"
-import { TileType, TokenTile } from './TokenTile'
+import { TileType, Token, TokenTile } from './TokenTile'
 import WaterTile from "./WaterTile"
 
 export type BoardTile = typeof DesertTile | typeof PortTile | typeof TokenTile | typeof WaterTile
@@ -8,6 +8,7 @@ export type BoardTile = typeof DesertTile | typeof PortTile | typeof TokenTile |
 export {
     DesertTile,
     PortTile,
+    type Token,
     PortType,
     TileType,
     TokenTile,

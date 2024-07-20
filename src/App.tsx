@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Board } from './components/Board'
+import { Board, generateRandomBoard } from './components/Board'
 import {DesertTile, PortTile, TokenTile, WaterTile, PortType, TileType } from './components/Tiles/Tiles'
 
 
@@ -81,15 +81,7 @@ function App() {
   ].flat())
 
   const handleClick = () => {
-    setBoard([
-      defaultBoardRow1,
-      defaultBoardRow2,
-      defaultBoardRow3,
-      defaultBoardRow4,
-      defaultBoardRow5,
-      defaultBoardRow6,
-      altRow7
-    ].flat())
+    setBoard(generateRandomBoard())
   }
 
   return (
