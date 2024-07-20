@@ -11,19 +11,19 @@ function getTileTypeCSS(tileType: TileType) {
     let tileTypeCSS = 'tile-error'
     switch (tileType) {
         case TileType.BrickTile:
-            tileTypeCSS = 'tile-brick'
+            tileTypeCSS = 'tile color-brick'
             break
         case TileType.OreTile:
-            tileTypeCSS = 'tile-ore'
+            tileTypeCSS = 'tile color-ore'
             break
         case TileType.SheepTile:
-            tileTypeCSS = 'tile-sheep'
+            tileTypeCSS = 'tile color-sheep'
             break
         case TileType.WheatTile:
-            tileTypeCSS = 'tile-wheat'
+            tileTypeCSS = 'tile color-wheat'
             break
         case TileType.WoodTile:
-            tileTypeCSS = 'tile-wood'
+            tileTypeCSS = 'tile color-wood'
             break
     }
 
@@ -35,10 +35,12 @@ interface Props {
     token: Token;
 }
 
-const TokenTile : React.FC<Props> = ({ tileType, token } : Props) => {
+export const TokenTile : React.FC<Props> = ({ tileType, token } : Props) => {
     return ( 
         <div className={getTileTypeCSS(tileType)}>
-            {token}
+            <div className={(token === 6 || token === 8) ? "text-color-white" : "text-color-black"}>
+                {token}
+            </div>
         </div>
     )
 }

@@ -10,7 +10,9 @@ function App() {
         <h1>Catan Board Generator!</h1>
       </div>
       <div className="Board">
-        <Board tiles={Array(37).fill(<WaterTile />)}/>
+        <div className="view-container">
+          <Board tiles={[]}/>
+        </div>
       </div>
       <div className="Generation">
         Here goes the button
