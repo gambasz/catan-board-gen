@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { Board } from './components/Board'
+import WaterTile from './components/Tiles/WaterTile';
 
 function App() {
   return (
@@ -8,7 +10,7 @@ function App() {
         <h1>Catan Board Generator!</h1>
       </div>
       <div className="Board">
-        The board goes here
+        <Board tiles={Array(37).fill(<WaterTile />)}/>
       </div>
       <div className="Generation">
         Here goes the button
