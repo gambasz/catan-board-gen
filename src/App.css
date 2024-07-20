@@ -1,7 +1,7 @@
 :root {
-  background-color: #777777;
-  --tile-width: 5vw;
-  --tile-between: 0.5vw;
+  background-color: #E4E4E4;
+  --tile-width: 2.5vw;
+  --tile-between: 0.25vw;
   --tile-height: calc(var(--tile-width) / sqrt(3));
   --tile-margin: calc(var(--tile-width) / 2);
   --tile-border: calc(var(--tile-margin) / sqrt(3));
@@ -36,12 +36,12 @@
 }
 
 .text-color-white {
-  font-size: 2.5vw;
+  font-size: 1.25vw;
   color: white;
 }
 
 .text-color-black {
-  font-size: 2.5vw;
+  font-size: 1.25vw;
   color: black;
 }
 
@@ -161,7 +161,7 @@
 
 .color-port {
     background-color: var(--color-tile-port);
-    font-size: 2.5vw;
+    font-size: 1.25vw;
 }
 
 .color-port::after,
@@ -242,7 +242,8 @@
 
 .App {
   display: grid;
-  grid-template-rows: 5vw 40vw 5vw 35vw;
+  place-content: center;
+  grid-template-rows: 4vw 22vw 7vw 7vw;
 }
 
 .Title {
@@ -256,6 +257,57 @@
 
 .Generation {
   text-align: center;
+}
+
+.generate-button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.generate-button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.generate-button:hover {
+  background-color: #2c974b;
+}
+
+.generate-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.generate-button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.generate-button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
 .Footer {
