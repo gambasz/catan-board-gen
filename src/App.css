@@ -1,7 +1,7 @@
 :root {
   background-color: #E4E4E4;
-  --tile-width: 2.5vw;
-  --tile-between: 0.25vw;
+  --tile-width: 4em;
+  --tile-between: 0.25em;
   --tile-height: calc(var(--tile-width) / sqrt(3));
   --tile-margin: calc(var(--tile-width) / 2);
   --tile-border: calc(var(--tile-margin) / sqrt(3));
@@ -27,91 +27,94 @@
 .tile-container {
   
   background-color: #E4E4E4;
-  grid-row: 1 / 3;
-  grid-column: 1 / 1;
-  padding-top: calc(var(--tile-height));
-  padding-bottom: calc(var(--tile-height));
-  padding-right: calc(var(--tile-height) * 2);
-  border: 0.25vw solid #000000; 
+  padding-bottom: calc(var(--tile-height) * 1.5);
 }
 
 .text-color-white {
-  font-size: 1.25vw;
+  font-size: 2em;
   color: white;
 }
 
 .text-color-black {
-  font-size: 1.25vw;
+  font-size: 2em;
   color: black;
 }
 
 .four-player-row-1 {
   display: grid;
+  justify-content: center;
   grid-row: 1 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
-  padding-left: calc(((var(--tile-width) + var(--tile-between)) / 2) * 3); 
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2); 
 }
 
 .four-player-row-2 {
   display: grid;
+  justify-content: center;
   grid-row: 2 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
-  padding-left: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
 }
 
 .four-player-row-3 {
   display: grid;
+  justify-content: center;
   grid-row: 3 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
-  padding-left: calc(((var(--tile-width) + var(--tile-between)) / 2) * 1);
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
 }
 
 .four-player-row-4 {
   display: grid;
+  justify-content: center;
   grid-row: 4 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
 }
 
 .four-player-row-5 {
   display: grid;
+  justify-content: center;
   grid-row: 5 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
-  padding-left: calc(((var(--tile-width) + var(--tile-between)) / 2) * 1);
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
 }
 
 .four-player-row-6 {
   display: grid;
+  justify-content: center;
   grid-row: 6 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
-  padding-left: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
 }
 
 .four-player-row-7 {
   display: grid;
+  justify-content: center;
   grid-row: 7 / 7;
   grid-template-columns: var(--tile-width) var(--tile-width) var(--tile-width) var(--tile-width);
   grid-auto-rows: calc(var(--tile-width) - var(--tile-width) / 6.4);
   grid-gap: var(--tile-between) var(--tile-between);
   padding-bottom: var(--tile-between);
-  padding-left: calc(((var(--tile-width) + var(--tile-between)) / 2) * 3);
+  padding-right: calc(((var(--tile-width) + var(--tile-between)) / 2) * 2);
 }
 
 .tile {
@@ -161,7 +164,7 @@
 
 .color-port {
     background-color: var(--color-tile-port);
-    font-size: 1.25vw;
+    /* font-size: 2em; */
 }
 
 .color-port::after,
@@ -241,9 +244,9 @@
 }
 
 .App {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-content: center;
-  grid-template-rows: 4vw 22vw 7vw 7vw;
 }
 
 .Title {
@@ -270,7 +273,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 600;
   line-height: 40px;
   padding: 6px 16px;
