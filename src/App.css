@@ -24,6 +24,28 @@
   --color-tile-number-red: #D3252B;
 }
 
+@media (max-width: 700px) {
+
+  :root { 
+    --tile-width: 2.7em; 
+    --tile-between: 0.1em;
+    --tile-height: calc(var(--tile-width) / sqrt(3));
+    --tile-margin: calc(var(--tile-width) / 2);
+    --tile-border: calc(var(--tile-margin) / sqrt(3)); 
+  }
+
+  .text-color-white {
+    font-size: 1em;
+    color: white;
+  }
+  
+  .text-color-black {
+    font-size: 1em;
+    color: black;
+  }
+
+}
+
 .tile-container {
   
   background-color: #E4E4E4;
